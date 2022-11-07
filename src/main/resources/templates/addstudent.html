@@ -1,0 +1,21 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/main.html">
+<div layout:fragment="site_content">
+    <form th:form method="post">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">NAME:</label>
+            <input name="studentName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insert name:">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">SURNAME:</label>
+            <input name="studentSurname" type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Insert surname:">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">EXAM:</label>
+            <input name="studentExam" type="number" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Insert exam:">
+        </div>
+        <button type="submit" class="btn btn-primary">ADD</button>
+    </form>
+</div>
+</html>
