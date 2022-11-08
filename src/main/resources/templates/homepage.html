@@ -21,11 +21,16 @@
             </thead>
             <tbody>
             <tr th:each="student : ${studentList}">
-                <td th:text="${student.getId()}"></td>
-                <td th:text="${student.getName()}"></td>
-                <td th:text="${student.getSurname()}"></td>
-                <td th:text="${student.getExam()}"></td>
-                <td th:text="${student.getMark()}"></td>
+                <th th:if="${student.getMark().equals('F')}" style="color:red;" scope="row" th:text="${student.getId()}"></th>
+                <th th:unless="${student.getMark().equals('F')}" scope="row" th:text="${student.getId()}"></th>
+                <td th:if="${student.getMark().equals('F')}" style="color:red;" th:text="${student.getName()}"></td>
+                <td th:unless="${student.getMark().equals('F')}"th:text="${student.getName()}"></td>
+                <td th:if="${student.getMark().equals('F')}" style="color:red;" th:text="${student.getSurname()}"></td>
+                <td th:unless="${student.getMark().equals('F')}"th:text="${student.surname}"></td>
+                <td th:if="${student.getMark().equals('F')}" style="color:red;" th:text="${student.getExam()}"></td>
+                <td th:unless="${student.getMark().equals('F')}"th:text="${student.getExam()}"></td>
+                <td th:if="${student.getMark().equals('F')}" style="color:red;" th:text="${student.getMark()}"></td>
+                <td th:unless="${student.getMark().equals('F')}" th:text="${student.getMark()}"></td>
             </tr>
             </tbody>
         </table>
