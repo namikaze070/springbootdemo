@@ -36,6 +36,8 @@ public class HomeController {
         newStud.setSurname(surname);
         newStud.setExam(exam);
         DBManager.addStudent(newStud);
+
+        System.out.print("sdasdasd");
         return "redirect:/";
     }
 
